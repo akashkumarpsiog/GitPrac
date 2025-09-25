@@ -1,0 +1,10 @@
+# text files with LF endings
+*.js text eol = lf
+*.html text eol = lf
+*.txt text eol = lf
+# binary files
+*.png filter=lfs diff=lfs merge=lfs -text
+*.jpg binary
+# config files use ours on merge
+config/settings.json merge=ours
+*.zip filter=lfs diff=lfs merge=lfs -text
